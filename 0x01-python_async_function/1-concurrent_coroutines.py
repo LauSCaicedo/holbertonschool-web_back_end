@@ -15,13 +15,10 @@ async def wait_n(n, max_delay) -> list:
     without using sort()
     """
     list_a: list = []
-    temp1: list = []
-    temp2: list = []
+    lists: list = []
     for x in range(n):
         list_a.append(wait_random(max_delay))
     for z in asyncio.as_completed(list_a):
         result = await z
-        temp1.append(result)
-    temp2 = list_a
-    list_a = temp1
-    return list_a
+        lists.append(result)
+    return lists
