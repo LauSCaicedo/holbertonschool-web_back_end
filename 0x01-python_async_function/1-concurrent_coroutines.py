@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """ Asyncio module and import previo file. """
 import asyncio
-from typing import List
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> List[float]:
+async def wait_n(n: int, max_delay: int) -> list:
     """
     write an async routine called wait_n that
     takes in 2 int arguments n and max_delay.
@@ -15,8 +14,8 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     the delays should be in ascending order
     without using sort()
     """
-    list_a: List[float] = []
-    lists: List[float] = []
+    list_a: list = []
+    lists: list = []
     for x in range(n):
         list_a.append(wait_random(max_delay))
     for z in asyncio.as_completed(list_a):
