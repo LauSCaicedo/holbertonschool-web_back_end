@@ -15,11 +15,7 @@ async def measure_runtime() -> float:
     roughly 10 seconds.
     """
     firts_time = time.time()
-    await asyncio.gather(
-        async_comprehension(),
-        async_comprehension(),
-        async_comprehension(),
-        async_comprehension()
-    )
+    await asyncio.gather(async_comprehension(), async_comprehension(),
+                         async_comprehension(), async_comprehension())
     total_time = time.time() - firts_time
     return total_time
