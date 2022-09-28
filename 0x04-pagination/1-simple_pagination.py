@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """ Comment function """
-from ast import arguments
 import csv
 import math
 from typing import List
