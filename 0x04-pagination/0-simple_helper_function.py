@@ -10,5 +10,5 @@ def index_range(page, page_size):
     for those particular pagination parameters.
     """
     stardindex = (page - 1) * page_size
-    endindex = stardindex * page_size
+    endindex = stardindex + page_size
     return (stardindex, endindex)
