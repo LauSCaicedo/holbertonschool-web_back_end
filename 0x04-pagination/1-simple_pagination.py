@@ -55,7 +55,7 @@ class Server:
         startindex, endindex = index_range(page, page_size)
         cache_d = self.dataset()
         list = []
-        if startindex >= len(cache_d):
+        if startindex >= len(self.dataset()):
             return list
         list = cache_d
         return list[startindex:endindex]
