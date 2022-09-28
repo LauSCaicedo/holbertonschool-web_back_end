@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+""" Comment function """
+
+
 def index_range(page, page_size):
     """
     Write a function named index_range
