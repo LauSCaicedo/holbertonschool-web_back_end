@@ -9,9 +9,6 @@ def index_range(page, page_size):
     the range of indexes to return in a list
     for those particular pagination parameters.
     """
-    if page == 1:
-        stardindex = 0
-    else:
-        stardindex = (page - 1) * page_size
-    endindex = page * page_size
+    stardindex = (page - 1) * page_size
+    endindex = stardindex * page_size
     return (stardindex, endindex)
