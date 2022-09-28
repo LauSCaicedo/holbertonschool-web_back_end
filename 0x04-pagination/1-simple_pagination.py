@@ -52,8 +52,8 @@ class Server:
         If the input arguments are out of range for the dataset, an empty list
         should be returned.
         """
-        assert type(page) == int and page > 0 and type(
-            page_size) == int and page_size > 0
+        assert type(page) == int and page > 0
+        assert type(page_size) == int and page_size > 0
         startindex, endindex = index_range(page, page_size)
         cache_d = self.dataset()
         if startindex >= len(cache_d):
