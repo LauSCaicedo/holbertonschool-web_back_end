@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 """ Comment function """
-
-
 from ast import arguments
 import csv
 import math
@@ -56,8 +54,6 @@ class Server:
         assert type(page_size) == int and page_size > 0
         startindex, endindex = index_range(page, page_size)
         cache_d = self.dataset()
-        list = []
         if startindex >= len(cache_d):
             return []
-        list = cache_d
         return cache_d[startindex:endindex]
