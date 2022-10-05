@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """ Create the class Auth. """
-from flask import requests
+from flask import request
 from typing import List, TypeVar
 
 
